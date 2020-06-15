@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- Low level steering controller for 4WD car-->
+  <node pkg="low_level_steering_controller" name="steer_controller" type="low_level_steering_controller" required="true" output="screen">
+    <param name="steer_topic_name" type="string"   value="/commands/servo/position"/>
+  </node>
+
+</launch>
+

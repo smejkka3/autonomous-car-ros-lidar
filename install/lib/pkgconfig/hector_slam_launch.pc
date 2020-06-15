@@ -1,0 +1,8 @@
+prefix=/home/cangorur/Workspace/app-ras/autonomous_driving/install
+
+Name: hector_slam_launch
+Description: Description of hector_slam_launch
+Version: 0.3.5
+Cflags: 
+Libs: -L/home/cangorur/Workspace/app-ras/autonomous_driving/install/lib 
+Requires: 

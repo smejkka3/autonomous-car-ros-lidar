@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: tf2_geometry_msgs
+Description: Description of tf2_geometry_msgs
+Version: 0.6.5
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/install/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib /opt/ros/melodic/lib/liborocos-kdl.so /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+Requires: geometry_msgs tf2_ros tf2

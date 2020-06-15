@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: pose_follower
+Description: Description of pose_follower
+Version: 0.3.2
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/pose_follower/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib -lpose_follower
+Requires: nav_core base_local_planner costmap_2d roscpp tf2_geometry_msgs tf2_ros nav_msgs pluginlib

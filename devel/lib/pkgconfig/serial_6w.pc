@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: serial_6w
+Description: Description of serial_6w
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib -lserial_6w
+Requires: roscpp std_msgs sixwd_msgs

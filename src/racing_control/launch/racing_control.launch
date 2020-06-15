@@ -1,0 +1,41 @@
+<launch>
+    <arg name="is_simulation" default="false" />
+    
+    <!-- SIMULATION -->
+    <group if="$(arg is_simulation)">       
+        <node pkg="racing_control" type="racing_control" name="racing_control" output="screen">
+            <param name="isSimulation" value="$(arg is_simulation)"/>
+            
+            <param name="maxSteeringAngle" value="1.3"/>        
+            <param name="minSpeedExploration" value="1.0"/>        
+            <param name="maxSpeedExploration" value="1.3"/>        
+            <param name="minSpeedRacing" value="1.5"/>        
+            <param name="maxSpeedRacing" value="1.6"/>
+            
+            <param name="breakWhenZero" value="true"/>
+            
+            <param name="maxDistanceNewTrackPoint" value="0.4"/>
+            
+            <param name="printCmd" value="true"/>
+        </node>
+    </group>
+    
+    <!-- REAL CAR -->
+    <group unless="$(arg is_simulation)">
+        <node pkg="racing_control" type="racing_control" name="racing_control" output="screen">
+            <param name="isSimulation" value="$(arg is_simulation)"/>
+            
+            <param name="maxSteeringAngle" value="0.485"/>        
+            <param name="minSpeedExploration" value="0.375"/>        
+            <param name="maxSpeedExploration" value="0.65"/>        
+            <param name="minSpeedRacing" value="0.75"/>        
+            <param name="maxSpeedRacing" value="0.85"/>
+            
+            <param name="breakWhenZero" value="true"/>
+            
+            <param name="maxDistanceNewTrackPoint" value="0.3"/>
+            
+            <param name="printCmd" value="true"/>
+        </node>
+    </group>
+</launch>

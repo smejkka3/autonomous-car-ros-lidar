@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="emergency_stop" pkg="emergency_stop" type="emergency_stop">
+  <param name="range_threshold" type="double" value="0.7" />
+  <param name="car_bumper_length" type="double" value="0.35" />
+  <param name="max_range" type="double" value="30.0" />
+</node>
+\endverbatim
+

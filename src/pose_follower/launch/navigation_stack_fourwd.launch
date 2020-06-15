@@ -1,0 +1,83 @@
+<launch>
+
+    <!--  ************** Global Parameters ***************  -->
+	<arg name="is_simulation" default="true"/>
+
+    <!--  ************** Move Base Package ***************  -->
+    <!-- SIMULATION -->
+    <group if="$(arg is_simulation)">
+	  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+	    <!-- Common parameters -->
+  	  	<rosparam file="$(find pose_follower)/cfg/carlike/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  	 	<rosparam file="$(find pose_follower)/cfg/carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="$(find pose_follower)/cfg/carlike/local_costmap_params_sim.yaml" command="load" />
+  		<rosparam file="$(find pose_follower)/cfg/carlike/global_costmap_params_sim.yaml" command="load" />
+  		
+  		<remap from="/cmd_vel" to="/cmd_vel_planner"/>
+  		
+  		<remap from="odom" to="/odometry/filtered" />
+        <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
+  		<param name="recovery_behavior_enabled" value="false" />
+  	
+  		<!-- Global Planner -->
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <param name="planner_frequency" value="0.1" />
+        <param name="planner_patience" value="5.0" />
+        
+        <rosparam file="$(find pose_follower)/cfg/carlike/global_planner_params_sim.yaml" command="load" />
+  		
+  		<!-- Local Planner -->
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+        <param name="controller_frequency" value="5.0" />
+        <param name="controller_patience" value="5.0" />
+        <rosparam file="$(find pose_follower)/cfg/carlike/dwa_planner_params_sim.yaml" command="load" />
+	  </node>
+	</group>
+	
+	<!-- REAL CAR -->
+    <group unless="$(arg is_simulation)">
+      <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <!-- Common parameters -->
+        <rosparam file="$(find pose_follower)/cfg/carlike/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find pose_follower)/cfg/carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find pose_follower)/cfg/carlike/local_costmap_params_real.yaml" command="load" />
+        <rosparam file="$(find pose_follower)/cfg/carlike/global_costmap_params_real.yaml" command="load" />
+        
+        <remap from="/cmd_vel" to="/cmd_vel_planner"/>
+        
+        <remap from="odom" to="/odometry/filtered" />
+        <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
+        <param name="recovery_behavior_enabled" value="false" />
+    
+        <!-- Global Planner -->
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+        <param name="planner_frequency" value="0.0" /> <!-- Only run when new target or path blocked-->
+        <param name="planner_patience" value="5.0" />
+        
+        <rosparam file="$(find pose_follower)/cfg/carlike/global_planner_params_real.yaml" command="load" />
+        
+        <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+        <param name="controller_frequency" value="10.0" />
+        <param name="controller_patience" value="5.0" />
+        
+        <rosparam file="$(find pose_follower)/cfg/carlike/dwa_planner_params_real.yaml" command="load" />
+      </node>
+    </group>
+	
+	<!-- Track detection -->
+    <include file="$(find track_detection)/launch/track_detection.launch">
+        <arg name="is_simulation" value="$(arg is_simulation)"/>
+    </include>
+
+	<!-- PID Controller -->
+	<include file="$(find pose_follower)/launch/pid_controller_fourwd.launch" />
+
+	<!-- PID nodes requires setpoint to be published. Because reference point is constant and zero, this is done once -->
+	<node pkg="rostopic" name="linear_pid_init" type="rostopic"  args=" pub /linear_pid/setpoint std_msgs/Float64 'data: 0.0' -1 " />
+	<node pkg="rostopic" name="steer_pid_init" type="rostopic"  args=" pub /steer_pid/setpoint std_msgs/Float64 'data: 0.0' -1 " />
+
+	<group if="$(arg is_simulation)">
+	  <include file="$(find pose_follower)/launch/navigation_stack_rviz.launch" />
+	</group>
+
+</launch>

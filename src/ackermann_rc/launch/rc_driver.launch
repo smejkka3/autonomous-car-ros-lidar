@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  
+  <include file="$(find racecar_simulator)/launch/simulate.launch"/>
+  
+
+  <node name="serial_comm" pkg="rosserial_python" type="serial_node.py">
+    <param name="port" value="/dev/ttyUSB_remote"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <node name="driver" pkg="ackermann_rc" type="rc_driver" output="screen" required="true">
+    <rosparam file="$(find ackermann_rc)/param/rc_params.yaml" command="load"/>
+  </node>  
+  
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: low_level_speed_controller
+Description: Description of low_level_speed_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: geometry_msgs roscpp sensor_msgs std_msgs sixwd_msgs

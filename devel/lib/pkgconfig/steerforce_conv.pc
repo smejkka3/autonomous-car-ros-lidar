@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: steerforce_conv
+Description: Description of steerforce_conv
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: 

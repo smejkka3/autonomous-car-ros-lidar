@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: vesc_msgs
+Description: Description of vesc_msgs
+Version: 0.0.1
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/install/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: std_msgs message_runtime

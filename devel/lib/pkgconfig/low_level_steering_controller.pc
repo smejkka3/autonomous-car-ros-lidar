@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: low_level_steering_controller
+Description: Description of low_level_steering_controller
+Version: 0.0.0
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/low_level_steering_controller/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: sixwd_msgs geometry_msgs nav_msgs roscpp sensor_msgs std_msgs

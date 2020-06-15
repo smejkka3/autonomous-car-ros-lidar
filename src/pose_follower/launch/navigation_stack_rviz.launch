@@ -1,0 +1,6 @@
+<launch>
+
+   <!--  **************** Visualisation ****************  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pose_follower)/cfg/rviz_navigation.rviz"/>
+
+</launch>

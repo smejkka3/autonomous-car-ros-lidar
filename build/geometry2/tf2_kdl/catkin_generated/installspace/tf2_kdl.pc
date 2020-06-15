@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: tf2_kdl
+Description: Description of tf2_kdl
+Version: 0.6.5
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/install/include -I/usr/include/eigen3 -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+Requires: 

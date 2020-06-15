@@ -1,0 +1,5 @@
+<launch>  
+  <node pkg="steerforce_conv" type="steerforce_converter_real.py" name="steerforce_converter" output="screen">
+    <rosparam file="$(find steerforce_conv)/params/params_real.yaml" />
+  </node>
+</launch>

@@ -1,0 +1,17 @@
+
+<launch>
+
+  <!-- Launch file for starting multiple sensors at once-->
+
+
+  <!-- Laser Scanner -->
+  <include file="$(find bear_car_launch)/launch/rplidar_a3.launch">
+  </include>
+
+  <!-- Real Sense and IMU-->
+  <include file="$(find bear_car_launch)/launch/rs_imu.launch">
+  </include>
+
+
+</launch>
+

@@ -1,0 +1,16 @@
+<launch>
+
+    <!--
+    This file contains some static TFs required for the 4WD platform
+    -->
+
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser"
+    args="0.2245 0.0 0.2 0.0 0.0 0.0 /base /laser 10"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="base_to_camera" 
+    args="0.15 0.0 0.27 0.0 0.0 0.0 /base /camera 10"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="base_to_imu"
+    args="0.15 0.0 0.27 0.0 0.0 0.0 /base /imu 10"/>
+	
+</launch>

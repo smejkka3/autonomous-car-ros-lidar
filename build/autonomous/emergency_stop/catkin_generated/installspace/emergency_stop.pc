@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: emergency_stop
+Description: Description of emergency_stop
+Version: 0.0.0
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/install/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: rc_msgs roscpp std_msgs

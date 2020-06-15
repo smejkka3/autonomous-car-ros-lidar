@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: six_wheel_odom
+Description: Description of six_wheel_odom
+Version: 0.0.0
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/six_wheel_odom/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib -lsix_wheel_odom
+Requires: roscpp rospy std_msgs

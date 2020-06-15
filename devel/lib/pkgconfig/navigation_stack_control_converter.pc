@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: navigation_stack_control_converter
+Description: Description of navigation_stack_control_converter
+Version: 0.0.0
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/navigation_stack_control_converter/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: rc_msgs roscpp rospy std_msgs vesc_msgs nav_msgs

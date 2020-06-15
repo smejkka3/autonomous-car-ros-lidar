@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: realsense2_description
+Description: Description of realsense2_description
+Version: 2.2.9
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: track_detection
+Description: Description of track_detection
+Version: 0.0.0
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/track_detection/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: 

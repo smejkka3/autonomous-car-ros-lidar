@@ -1,0 +1,30 @@
+
+<launch>
+
+  <!-- Launch file for setting up everything for a complete autonomous navigation based on
+       odometry (wheel,laser,imu) and move_base navigation stack-->
+
+  <!-- Node for interfacing the VESC controller-->
+  <include file="$(find vesc_driver)/launch/vesc_driver_node.launch">
+  </include>
+
+  <!-- Low level linear speed controller-->
+  <include file="$(find low_level_speed_controller)/launch/four_wd.launch">
+  </include>
+
+  <!-- Low level steering controller-->
+  <include file="$(find low_level_steering_controller)/launch/steering_controller_fourwd.launch">
+  </include>
+
+  <!-- Odometry fusion, this launch file is also starting the sensors such as RealSense and Lidar-->
+  <include file="$(find odometry_agent)/launch/odometry_agent.launch">
+    <arg name="is_simulation" value="false"/>
+  </include>
+
+  <!--Global and Local Planner-->
+  <include file="$(find pose_follower)/launch/navigation_stack_fourwd.launch">
+    <arg name="is_simulation" value="false"/>
+  </include>
+
+</launch>
+

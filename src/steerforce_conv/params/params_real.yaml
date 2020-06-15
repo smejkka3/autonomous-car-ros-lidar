@@ -1,0 +1,5 @@
+max_steer_ang: 0.5
+min_input_speed: 0.05
+min_speed: 0.35
+max_speed: 0.84
+speed_factor: 1.5

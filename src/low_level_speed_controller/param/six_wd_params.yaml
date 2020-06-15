@@ -1,0 +1,4 @@
+topic_name: "/motor_controller/motor_commands"
+control_topic_name: "/cmd_vel"
+odom_topic_name: "/wheel_odom"
+point_topic_name: "/current_position"

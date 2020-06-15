@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="low_level_speed_controller" name="low_level_controller" type="low_level_controller" required="true" output="screen">
+        <rosparam command="load" file="$(find low_level_speed_controller)/param/four_wd_params.yaml" />
+    </node>
+
+</launch>

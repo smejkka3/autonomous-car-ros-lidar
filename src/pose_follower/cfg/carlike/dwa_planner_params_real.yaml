@@ -1,0 +1,46 @@
+DWAPlannerROS:
+  odom_topic: odom
+
+  acc_lim_x: 2.0
+  acc_lim_y: 0.0
+  acc_lim_th: 3.0
+
+  min_vel_x: 0.0
+  max_vel_x: 3.0
+
+  min_vel_y: 0.0
+  max_vel_y: 0.0
+
+  min_vel_trans: 0.0
+  max_vel_trans: 3.0
+
+  min_vel_theta: 0.0
+  max_vel_theta: 2.0
+
+  sim_time: 3.5
+  sim_granularity: 0.025
+  
+  goal_distance_bias: 0.5
+  path_distance_bias: 0.5
+  occdist_scale: 0.8
+
+  xy_goal_tolerance: 0.15
+  yaw_goal_tolerance: 0.8
+  latch_xy_goal_tolerance: True
+
+  forward_point_distance: 0.325
+  stop_time_buffer: 0.3
+  oscillation_reset_dist: 0.05
+  
+  # Probably not used
+  scaling_speed: 0.25
+  max_scaling_factor: 0.2
+  
+  vx_samples: 10
+  vy_samples: 0
+  vtheta_samples: 30
+  sim_period: 0.1
+
+  # Are these used?
+  theta_stopped_vel: 0.01
+  trans_stopped_vel: 0.01

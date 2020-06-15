@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: hector_geotiff_plugins
+Description: Description of hector_geotiff_plugins
+Version: 0.3.5
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: 

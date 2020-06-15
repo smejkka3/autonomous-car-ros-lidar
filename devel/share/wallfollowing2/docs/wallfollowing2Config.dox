@@ -1,0 +1,24 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~min_throttle" : \b [double] Specifies the minimum speed. min: 0.0, default: 0.2, max: 1.0
+- \b "~max_throttle" : \b [double] Specifies the maximum speed. min: 0.0, default: 1.0, max: 1.0
+- \b "~radius_lower" : \b [double] Specifies a lower radius, used to calculate a speed limit. min: 0.001, default: 2.0, max: std::numeric_limits<double>::infinity()
+- \b "~radius_upper" : \b [double] Specifies a upper radius, used to calculate a speed limit. min: 0.001, default: 30.0, max: std::numeric_limits<double>::infinity()
+- \b "~steering_slow_down" : \b [double] Used to calculate the speed limit error. min: 0.0, default: 4.0, max: std::numeric_limits<double>::infinity()
+- \b "~steering_slow_down_dead_zone" : \b [double] Used to calculate the speed limit error. min: 0.0, default: 0.2, max: std::numeric_limits<double>::infinity()
+- \b "~high_speed_steering_limit" : \b [double] Used to calculate the steering steering_cmd. min: 0.0, default: 0.5, max: std::numeric_limits<double>::infinity()
+- \b "~high_speed_steering_limit_dead_zone" : \b [double] Used to calculate the steering steering_cmd. min: 0.0, default: 0.2, max: std::numeric_limits<double>::infinity()
+- \b "~max_acceleration" : \b [double] Specifies the maximum acceleration. min: 0.0, default: 0.4, max: std::numeric_limits<double>::infinity()
+- \b "~corner_cutting" : \b [double] Used to calculate the predicted car position. min: 0.0, default: 1.4, max: std::numeric_limits<double>::infinity()
+- \b "~straight_smoothing" : \b [double] Used to calculate the predicted car position. min: 0.0, default: 1.0, max: std::numeric_limits<double>::infinity()
+- \b "~barrier_size_realtive" : \b [double] Used to calculate the start and end point of the barrier. The barrier is the distance the car can drive straight. min: 0.0, default: 0.1, max: std::numeric_limits<double>::infinity()
+- \b "~barrier_lower_limit" : \b [double] Used to calulate the speed limit at the end of straight track sections. min: 0.0, default: 1.0, max: std::numeric_limits<double>::infinity()
+- \b "~barrier_upper_limit" : \b [double] Used to calulate the speed limit at the end of straight track sections. min: 0.0, default: 15.0, max: std::numeric_limits<double>::infinity()
+- \b "~barrier_exponent" : \b [double] Used to calulate the speed limit at the end of straight track sections. min: 0.0, default: 1.4, max: std::numeric_limits<double>::infinity()
+- \b "~controller_p" : \b [double] Specifies the proportional value of the PID controller. min: -std::numeric_limits<double>::infinity(), default: 4.0, max: std::numeric_limits<double>::infinity()
+- \b "~controller_i" : \b [double] Specifies the integral value of the PID controller. min: -std::numeric_limits<double>::infinity(), default: 0.2, max: std::numeric_limits<double>::infinity()
+- \b "~controller_d" : \b [double] Specifies the derivative value of the PID controller. min: -std::numeric_limits<double>::infinity(), default: 0.02, max: std::numeric_limits<double>::infinity()
+- \b "~usable_laser_range" : \b [double] The size of the part of the laser scan that should be used by the algorithm, in degrees. min: 90.0, default: 220.0, max: 271.0
+

@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~range_threshold" : \b [double] Specifies the smallest distance between the bumper and an object that must be maintained before the emergency stop is activated. min: 0.2, default: 0.7, max: 3.0
+- \b "~car_bumper_length" : \b [double] Specifies the length of the bumper. min: 0.1, default: 0.35, max: 0.6
+- \b "~max_range" : \b [double] Specifies the maximum distance between the bumper and an object that must be maintained before the emergency stop is activated. min: 3.0, default: 30.0, max: 30.0
+

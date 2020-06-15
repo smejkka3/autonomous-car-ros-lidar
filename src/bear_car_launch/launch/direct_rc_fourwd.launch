@@ -1,0 +1,16 @@
+
+<launch>
+
+  <!-- Launch file for directly controlling the 4WD with the RC-->
+
+  <!-- Node for interfacing the VESC controller-->
+  <include file="$(find vesc_driver)/launch/vesc_driver_node.launch">
+  </include>
+
+  <!-- Node for getting RC input-->
+  <include file="$(find ackermann_rc)/launch/rc_driver_vesc.launch">
+  </include>
+
+
+</launch>
+

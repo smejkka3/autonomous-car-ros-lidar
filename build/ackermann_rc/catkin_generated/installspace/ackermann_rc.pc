@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: ackermann_rc
+Description: Description of ackermann_rc
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: ackermann_msgs rc_msgs roscpp rospy std_msgs sixwd_msgs

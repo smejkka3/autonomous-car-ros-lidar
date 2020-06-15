@@ -1,0 +1,19 @@
+GlobalPlanner:
+  odom_topic: odom
+
+  allow_unknown: true #Specifies whether or not to allow the planner to create plans that traverse unknown space. NOTE: if you are using a layered costmap_2d costmap with a voxel or obstacle layer, you must also set the track_unknown_space param for that layer to be true, or it will convert all your unknown space to free space (which planner will then happily go right through).
+
+  default_tolerance: 0.0 #A tolerance on the goal point for the planner. The planner will attempt to create a plan that is as close to the specified goal as possible but no further than default_tolerance away.
+
+  visualize_potential: false # Specifies whether or not to visualize the potential area computed via a PointCloud2.
+  use_dijkstra: true # If true, use dijkstra's algorithm. Otherwise, A*.
+  use_quadratic: true # If true, use the quadratic approximation of the potential. Otherwise, use a simpler calculation.
+  use_grid_path: false # If true, create a path that follows the grid boundaries. Otherwise, use a gradient descent method.
+  old_navfn_behavior: false
+  lethal_cost: 230
+  neutral_cost: 66
+  cost_factor: 0.55
+  publish_potential: True
+  orientation_mode: 2 # How to set the orientation of each point (None=0, Forward=1, Interpolate=2, ForwardThenInterpolate=3, Backward=4, Leftward=5, Rightward=6)
+  orientation_window_size: 1
+

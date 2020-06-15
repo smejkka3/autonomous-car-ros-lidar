@@ -1,0 +1,19 @@
+
+<launch>
+
+  <!-- Launch file for setting up everything for a complete autonomous navigation based on
+       odometry (wheel,laser,imu) and move_base navigation stack in simulation-->
+
+
+  <!-- Odometry fusion, SLAM, ...-->
+  <include file="$(find odometry_agent)/launch/odometry_agent.launch">
+    <arg name="is_four_wd" value="true"/>
+    <arg name="is_simulation" value="true"/>
+  </include>
+
+  <!--Global and Local Planner for move_base-->
+  <include file="$(find pose_follower)/launch/navigation_stack_fourwd.launch">
+  </include>
+
+</launch>
+

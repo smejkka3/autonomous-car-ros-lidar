@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="2">
+  <name>drive_msgs</name>
+  <version>0.0.0</version>
+  <description>The "drive_msgs" package contains the necessary ROS messages.</description>
+
+  <!-- Maintainer -->
+  <maintainer email="karel@todo.com">PG F1/10</maintainer>
+
+  <!-- License -->
+  <license>MIT</license>
+  <license>GPLv3</license>
+
+  <!-- Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>std_msgs</depend>
+  <depend>message_generation</depend>
+  <depend>message_runtime</depend>
+
+</package>

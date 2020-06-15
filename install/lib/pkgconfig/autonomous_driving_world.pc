@@ -1,0 +1,8 @@
+prefix=/home/cangorur/Workspace/app-ras/autonomous_driving/install
+
+Name: autonomous_driving_world
+Description: Description of autonomous_driving_world
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cangorur/Workspace/app-ras/autonomous_driving/install/lib 
+Requires: 

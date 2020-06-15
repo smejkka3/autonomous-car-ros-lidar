@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: tf2_eigen
+Description: Description of tf2_eigen
+Version: 0.6.5
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/geometry2/tf2_eigen/include -I/usr/include/eigen3
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: 

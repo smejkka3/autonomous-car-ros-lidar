@@ -1,0 +1,15 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~fallback_range" : \b [double] Fallback range in case no valid LIDAR range was found. min: 0.0, default: 4.0, max: std::numeric_limits<double>::infinity()
+- \b "~sample_angle_1" : \b [double] The first steering_cmd to sample a point on the wall. min: -std::numeric_limits<double>::infinity(), default: 0, max: std::numeric_limits<double>::infinity()
+- \b "~sample_angle_2" : \b [double] The second steering_cmd to sample a point on the wall. min: -std::numeric_limits<double>::infinity(), default: 0, max: std::numeric_limits<double>::infinity()
+- \b "~wall_following_max_speed" : \b [double] Specifies the maximum speed. min: 0.0, default: 0.25, max: std::numeric_limits<double>::infinity()
+- \b "~wall_following_min_speed" : \b [double] Specifies the minimum speed. min: 0.0, default: 0.2, max: std::numeric_limits<double>::infinity()
+- \b "~prediction_distance" : \b [double] The car will aim to reach the target wall distance after travelling this distance. The higher this number, the more aggressively the car will cut corners. min: 0.0, default: 2.0, max: std::numeric_limits<double>::infinity()
+- \b "~target_wall_distance" : \b [double] The desired distance between the wall and the car. min: 0.0, default: 0.5, max: std::numeric_limits<double>::infinity()
+- \b "~time_between_scans" : \b [double] TODO Tooltip min: 0.0, default: 0.025, max: std::numeric_limits<double>::infinity()
+- \b "~min_range" : \b [double] Discards LIDAR measurements below this range. min: 0.0, default: 0.2, max: std::numeric_limits<double>::infinity()
+- \b "~max_range" : \b [double] Discards LIDAR measurements above this range. min: 0.0, default: 30.0, max: std::numeric_limits<double>::infinity()
+

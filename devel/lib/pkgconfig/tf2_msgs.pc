@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: tf2_msgs
+Description: Description of tf2_msgs
+Version: 0.6.5
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/include -I/home/karel/Documents/University/WS2019/AAIP/software_integration/src/geometry2/tf2_msgs/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: message_generation geometry_msgs actionlib_msgs

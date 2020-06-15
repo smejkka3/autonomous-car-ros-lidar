@@ -1,0 +1,19 @@
+<launch>
+
+    <arg name="is_four_wd" default="true"/>
+
+    <group if="$(arg is_four_wd)">
+        <include file="$(find pose_follower)/launch/pid_controller_fourwd.launch" />
+    </group>
+
+    <group unless="$(arg is_four_wd)">
+        <include file="$(find pose_follower)/launch/pid_controller_sixwd.launch" />
+    </group>
+
+    <include file="$(find low_level_speed_controller)/launch/four_wd.launch" if="$(eval is_four_wd == true)">
+    </include>
+
+    <include file="$(find low_level_speed_controller)/launch/six_wd.launch" if="$(eval is_four_wd == false)">
+    </include>
+
+</launch>

@@ -1,0 +1,21 @@
+
+# Frame Parameters
+odom_frame: 'map'
+base_frame: 'base_footprint'
+
+#Bool
+
+use_servo_cmd_to_calc_angular_velocity: true
+publish_tf: false 
+
+#Linear Speed Calculation Parameters
+
+speed_to_erpm_offset: 16.6
+speed_to_erpm_gain: 3485.3528
+
+#Angular Speed Calculation Parameters
+
+steering_angle_to_servo_gain: 0.015
+steering_angle_to_servo_offset: 0.45
+
+wheelbase: 0.28

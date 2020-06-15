@@ -1,0 +1,8 @@
+prefix=/home/cangorur/Workspace/app-ras/autonomous_driving/install
+
+Name: major_description
+Description: Description of major_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cangorur/Workspace/app-ras/autonomous_driving/install/lib 
+Requires: 

@@ -1,0 +1,18 @@
+robot_base_frame: "base"
+transform_tolerance: 0.5
+footprint: [ [-0.2,-0.15], [0.2,-0.15], [0.2,0.15], [-0.2,0.15] ]
+
+obstacle_layer:
+ enabled: true
+ obstacle_range: 3.0
+ raytrace_range: 3.5
+ inflation_radius: 0.0
+ track_unknown_space: false
+ combination_method: 1
+ observation_sources: laser_scan_sensor
+ laser_scan_sensor: {data_type: LaserScan, topic: scan, marking: true, clearing: true}
+
+static_layer:
+  enabled:              true
+  trinary_costmap:      true
+  map_topic:            "/map_obstacles"

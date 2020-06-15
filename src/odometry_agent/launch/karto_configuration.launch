@@ -1,0 +1,23 @@
+<!--
+Provides a reasonable set of parameters for running Karto on a robot
+Assumes an 'odom_combined' frame, that provides reasonably accurate odometry
+-->
+
+<launch>
+  <arg name="scan_topic_name"/>
+
+  <node pkg="slam_karto" type="slam_karto" name="slam_karto" output="screen">
+  
+  	<!-- Frame names -->
+    <param name="map_frame" value="map"/>
+    <param name="base_frame" value="base" />
+    <param name="odom_frame" value="odom" />
+    
+    <!-- remap scan topic to argument -->
+    <remap from="scan" to="$(arg scan_topic_name)"/>
+    
+    <param name="map_update_interval" value="1.0"/>
+    <param name="resolution" value="0.0125"/>
+    
+  </node>
+</launch>

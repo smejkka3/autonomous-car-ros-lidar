@@ -1,0 +1,49 @@
+<launch>
+  <arg name="is_simulation" default="false" />
+
+  <!-- SIMULATION -->
+  <group if="$(arg is_simulation)">       
+    <node pkg="track_detection" type="track_detection" name="track_detection" output="screen">
+      <!-- Exploration -->
+      <!-- The final exploration target is moved forward by this amount-->
+      <param name="explorationHeading" value="0.75"/>
+      <!-- The initial exploration base is moved forward by this amount and new cones are searched from here-->
+      <param name="explorationRobotPositionOffset" value="1.5"/>
+      <param name="maxExplorationConeDistance" value="4.0"/>
+      <param name="defaultStartLineRadius" value="1.25"/>
+      
+      <!-- Cone Detection -->
+      <param name="maxConeDistance" value="1.7"/>
+        
+      <!-- Cone Kernel -->
+      <param name="rCenter" value="3"/>
+      <param name="minOccupiedCenter" value="2"/>
+      <param name="rBorder" value="19"/>
+      <param name="maxOccupiedBorder" value="1"/>
+      <param name="maxUnknownBorder" value="40"/>
+    </node>
+  </group>
+    
+  <!-- REAL CAR -->
+  <group unless="$(arg is_simulation)">
+    <node pkg="track_detection" type="track_detection" name="track_detection" output="screen">    
+      <!-- Exploration -->
+      <!-- The final exploration target is moved forward by this amount-->
+      <param name="explorationHeading" value="0.75"/>
+      <!-- The initial exploration base is moved forward by this amount and new cones are searched from here-->
+      <param name="explorationRobotPositionOffset" value="1.5"/>
+      <param name="maxExplorationConeDistance" value="3.5"/>
+      <param name="defaultStartLineRadius" value="1.25"/>
+      
+      <!-- Cone Detection -->
+      <param name="maxConeDistance" value="1.5"/>
+        
+      <!-- Cone Kernel -->
+      <param name="rCenter" value="3"/>
+      <param name="minOccupiedCenter" value="2"/>
+      <param name="rBorder" value="16"/>
+      <param name="maxOccupiedBorder" value="1"/>
+      <param name="maxUnknownBorder" value="36"/>
+    </node>
+  </group>
+</launch>

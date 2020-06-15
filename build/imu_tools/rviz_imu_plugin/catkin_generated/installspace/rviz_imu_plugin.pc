@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: rviz_imu_plugin
+Description: Description of rviz_imu_plugin
+Version: 1.0.15
+Cflags: 
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib 
+Requires: rviz

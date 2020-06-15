@@ -1,0 +1,32 @@
+# These are the parameters for 
+# the RC Commander. Middle value is measured when throttle stick is untouched.
+# These values can be obtained by rostopic echo /rc_command
+#
+# Important is that you to not change the trim configuration. Following configuration used
+# ST: R
+# TH: R
+# ST.TRIM: maximum right position
+# TH.TRIM: maximum left position
+# ATV: maximum right position
+
+max_throttle_output: 1456.0 # Throttle stick pulled to max
+min_throttle_output: 1276.0 # Throttle stick pushed to max
+middle_throttle_output: 1372.0 # Throttle stick not touched
+
+max_steering_output: 1740.0
+min_steering_output: 1408.0
+middle_steering_output: 1616.0
+
+# Max and min linear speed of the car.
+# Min value is the minimum throttle value that car starts to move
+max_car_linear_speed: 5.0
+min_car_linear_speed: 0.0
+
+# Angle limits for the car.
+max_car_angle: 0.9
+min_car_angle: 0.0
+
+# This is the topic where morse receives twist commands
+twist_topic: '/cmd_vel'
+# This is the topic which Arduino publishes the RC command measurements
+rc_topic: '/rc_command'

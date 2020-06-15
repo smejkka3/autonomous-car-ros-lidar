@@ -1,0 +1,8 @@
+prefix=/home/cangorur/Workspace/app-ras/autonomous_driving/install
+
+Name: bear_car_launch
+Description: Description of bear_car_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/cangorur/Workspace/app-ras/autonomous_driving/install/lib 
+Requires: 

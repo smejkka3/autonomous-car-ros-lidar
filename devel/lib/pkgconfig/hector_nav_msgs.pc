@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/devel
+
+Name: hector_nav_msgs
+Description: Description of hector_nav_msgs
+Version: 0.3.5
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/devel/lib 
+Requires: nav_msgs geometry_msgs message_runtime

@@ -1,0 +1,11 @@
+control_topic_name: "/cmd_vel" 
+odom_topic_name: "/wheel_odom"
+point_topic_name: "/current_position"  
+topic_name: "/commands/motor/speed"
+takeoff_topic_name: "/commands/motor/duty_cycle"
+control_effort_topic: "/control_effort"
+takeoff_current: 0.04
+state_topic: "/state"
+setpoint_topic: "/setpoint"
+enable_topic: "/pid_enable"
+takeoff_speed_limit: 0.4

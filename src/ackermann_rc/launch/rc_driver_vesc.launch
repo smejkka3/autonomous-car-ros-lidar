@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+
+  <node name="serial_comm" pkg="rosserial_python" type="serial_node.py">
+    <param name="port" value="/dev/ttyUSB_remote"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <node name="ackermann_to_vesc_cmd" pkg="ackermann_rc" type="ackermann_to_vesc" output="screen" required="true">
+    <rosparam file="$(find ackermann_rc)/param/rc_params_vesc.yaml" command="load"/>
+  </node>  
+  
+</launch>

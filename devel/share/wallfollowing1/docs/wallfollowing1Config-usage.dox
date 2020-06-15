@@ -1,0 +1,16 @@
+\subsubsection usage Usage
+\verbatim
+<node name="wallfollowing1" pkg="wallfollowing1" type="wallfollowing1">
+  <param name="fallback_range" type="double" value="4.0" />
+  <param name="sample_angle_1" type="double" value="0" />
+  <param name="sample_angle_2" type="double" value="0" />
+  <param name="wall_following_max_speed" type="double" value="0.25" />
+  <param name="wall_following_min_speed" type="double" value="0.2" />
+  <param name="prediction_distance" type="double" value="2.0" />
+  <param name="target_wall_distance" type="double" value="0.5" />
+  <param name="time_between_scans" type="double" value="0.025" />
+  <param name="min_range" type="double" value="0.2" />
+  <param name="max_range" type="double" value="30.0" />
+</node>
+\endverbatim
+

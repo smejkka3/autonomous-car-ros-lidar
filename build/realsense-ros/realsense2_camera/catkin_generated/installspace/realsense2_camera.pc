@@ -1,0 +1,8 @@
+prefix=/home/karel/Documents/University/WS2019/AAIP/software_integration/install
+
+Name: realsense2_camera
+Description: Description of realsense2_camera
+Version: 2.2.9
+Cflags: -I/home/karel/Documents/University/WS2019/AAIP/software_integration/install/include
+Libs: -L/home/karel/Documents/University/WS2019/AAIP/software_integration/install/lib -lrealsense2_camera
+Requires: message_runtime roscpp sensor_msgs std_msgs nodelet cv_bridge image_transport ddynamic_reconfigure nav_msgs
