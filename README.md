@@ -119,4 +119,4 @@ To use rviz while ros is running on the real car you can use a provided script t
 Afterwards rviz can be started normally via 
 
 `rviz`.
-# autonomous-car-ros-lidar
+
